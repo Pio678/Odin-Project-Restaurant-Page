@@ -4,10 +4,21 @@
   src: url("../assets/fonts/Sableklish-ywlLd.ttf");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:wght@500;700;900&display=swap");
+
+:root {
+  --red: #d64933;
+  --yellow: #f7b801;
+  --gray: #191919;
+  --light-gray: #93a8ac;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 html {
@@ -27,21 +38,26 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 5fr 1fr;
+  grid-template-rows: 20rem 1fr 30rem;
 }
 
 header {
-  background-color: rgba(16, 13, 13, 0.715);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--red);
 
-  display: grid;
-  grid-row: 1fr 1fr;
-  justify-content: center;
+  padding: 0 5rem 0 5rem;
+  grid-template-columns: 1fr 1fr;
 }
 
-header > h1 {
+.logo {
   font-family: "Sableklish";
-  font-size: 7rem;
-  color: white;
+  font-size: 8rem;
+  color: var(--yellow);
+  margin: 0rem 1rem 0rem 1rem;
+  white-space: nowrap;
 }
 
 nav {
@@ -49,26 +65,80 @@ nav {
   font-size: 3rem;
   align-items: center;
   justify-content: space-between;
-  margin: 3rem;
+  margin: 1rem;
+  width: 50rem;
 }
 
 .nav-item {
+  font-weight: 600;
+
   border: none;
   background: none;
   cursor: pointer;
   color: white;
 }
 
+.nav-item.active {
+  color: var(--yellow);
+}
 main {
-  background: none;
-  background: url(../assets/img/kebab3.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: var(--gray);
 }
 
 footer {
-  background-color: pink;
+  background-color: black;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  color: var(--yellow);
+  font-size: 5rem;
+  font-family: Sableklish;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.footer-info-container {
+  display: grid;
+  gap: 1rem;
+  color: white;
+  font-size: 2.5rem;
+  grid-template-areas:
+    "facebook phone"
+    "instagram adress"
+    ". email";
+}
+
+.footer-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
+.footer-icon {
+  height: 4rem;
+}
+
+.footer-phone {
+  grid-area: phone;
+}
+
+.footer-adress {
+  grid-area: adress;
+}
+
+.footer-email {
+  grid-area: email;
+}
+
+.footer-facebook {
+  grid-area: facebook;
+}
+
+.footer-instagram {
+  grid-area: instagram;
 }

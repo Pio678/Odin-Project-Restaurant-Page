@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-header {
+  font-size: 6rem;
+  font-family: "Sableklish";
+  color: white;
+  text-align: center;
+}
+
+.contact-text {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
