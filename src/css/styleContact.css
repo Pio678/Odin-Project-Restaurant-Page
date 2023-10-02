@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  width: 100%;
+}
+
 .contact-header {
   font-size: 6rem;
   font-family: "Sableklish";
@@ -15,4 +25,82 @@
   color: white;
   font-size: 3rem;
   text-align: center;
+}
+
+.contact-info-row {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-icon {
+  height: 5rem;
+  grid-column: 2/3;
+}
+.contact-info-text,
+.contact-link {
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  justify-self: start;
+}
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr 5rem 1fr;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.socials-header {
+  color: white;
+  justify-self: start;
+  font-size: 4rem;
+  font-family: "Sableklish";
+  grid-column: 2/4;
+}
+
+.contact-map {
+  grid-column: 1/2;
+  grid-row: 1/7;
+  height: 100%;
+  aspect-ratio: 1/1;
+  justify-self: end;
+  margin-right: 3rem;
+}
+
+.opening-hours-header {
+  color: white;
+  text-align: center;
+  font-family: "Sableklish";
+  font-size: 4rem;
+  margin: 3rem 1rem 3rem 1rem;
+}
+
+.opening-hours-container {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 2.4rem;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.opening-hours {
+  justify-self: start;
+}
+
+.opening-day {
+  justify-self: end;
+  font-weight: 600;
+}
+
+.opening-hours-sunday {
+  color: red;
 }

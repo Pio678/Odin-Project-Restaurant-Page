@@ -123,7 +123,7 @@ function createFooter() {
 
   const footerEmailText = document.createElement("p");
   footerEmailText.classList.add("footerInfoText");
-  footerEmailText.innerText = "contact@HamzaKebab.com";
+  footerEmailText.innerText = "contact@Hamza.com";
 
   const footerFacebook = document.createElement("div");
   footerFacebook.classList.add("footer-info-row", "footer-facebook");
